@@ -21,12 +21,15 @@ body {
     background-image: url(../img/bg.png);
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 20px 0 50px 0;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 0 50px 0;
+
     &__logo {
         display: block;
         background-image: url(../img/logo.svg);
@@ -37,8 +40,20 @@ body {
         list-style-type: none;
         display: flex;
         justify-content: flex-end;
+        font-family: 'Open Sans', sans-serif;
         &__item {
-            margin-left: 10px;
+            margin-left: 15px;
+        }
+        &__item>a {
+            color: #fff;
+            text-decoration: none;
+        }
+        &__item>a:hover {
+            color: #65e496;
+        }
+        &__item>a:active {
+            color: #fff;
+            border-bottom: 3px solid #65e496;
         }
     }
 }
