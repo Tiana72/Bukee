@@ -6,6 +6,9 @@
 @import "base/general";
 @import "../blocks/modules";
 
+$light-color: #fff;
+$accent-color: #65e496;
+
 h1, h2, h3, h4, p {
     padding: 0;
     margin: 0;
@@ -17,18 +20,26 @@ body {
     font-family: 'Roboto Slab', serif;
 }
 
+.wrap {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
 .page-main {
     background-image: url(../img/bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 20px 0 50px 0;
+    padding-bottom: 162px;
+    color: $light-color;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 0 50px 0;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 50px 0 178px 0;
 
     &__logo {
         display: block;
@@ -42,18 +53,86 @@ body {
         justify-content: flex-end;
         font-family: 'Open Sans', sans-serif;
         &__item {
-            margin-left: 15px;
+            margin-left: 19.5px;
+            line-height: 1.8;
+            border-bottom: 3px solid transparent;
+            transition: 0.5s;
+            &:hover {
+                border-bottom: 3px solid $accent-color;
+            }
         }
-        &__item>a {
-            color: #fff;
+        &__item.active {
+            border-bottom: 3px solid $accent-color;
+        }
+        &__link {
             text-decoration: none;
+            color: $light-color;
+            letter-spacing: 0.85px;
         }
-        &__item>a:hover {
-            color: #65e496;
+    }
+}
+
+.block-text {
+    flex-basis: calc(100% - 499px);
+    &__name {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        letter-spacing: 1.1px;
+        padding-top: 2px;
+        padding-bottom: 28px;
+    }
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+        letter-spacing: 1.6px;
+        span {
+            display: block;
+            color: $accent-color;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 0.9px;
+            line-height: 2.5;
+            padding-bottom: 28px;
         }
-        &__item>a:active {
-            color: #fff;
-            border-bottom: 3px solid #65e496;
-        }
+    }
+    &__description {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+        line-height: 1.6;
+        letter-spacing: 0.77px;
+        margin-bottom: 23px;
+        max-width: 575px;
+    }
+    &__btn {
+        display: block;
+        background-color: #65e496;
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        max-width: 211px;
+        padding: 12px 20px 17px 20px;
+        border-radius: 3px;
+        text-align: center;
+        letter-spacing: 0.7px;
+        margin: 47px 0 19px 0;
+    }
+    &__small {
+        font-style: italic;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+}
+
+.block-book {
+    display: flex;
+    justify-content: space-between;
+    &-demo {
+        display: block;
+        background-image: url(../img/book.svg);
+        background-repeat: no-repeat;
+        width: 445px;
+        height: 639px;
+        flex-basis: 445px;
     }
 }
