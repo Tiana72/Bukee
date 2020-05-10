@@ -8,16 +8,25 @@
 
 $light-color: #fff;
 $accent-color: #65e496;
+$bg-light-color: #f5f6fa;
+$bg-dark-color: #44444f;
 
 h1, h2, h3, h4, p {
     padding: 0;
     margin: 0;
 }
 
+h3 {
+    font-size: 24px;
+    letter-spacing: 1.2px;
+}
+
 /*font-family: 'Open Sans', sans-serif;*/
 
 body {
     font-family: 'Roboto Slab', serif;
+   /* font-size: 15px;
+    line-height: 24px;*/
 }
 
 .wrap {
@@ -34,7 +43,23 @@ body {
 }
 
 .page {
-    padding-top: 160px;
+    padding: 160px 0 160px;
+    &_gray {
+        background-color: $bg-light-color;
+        padding: 149px 0 230px;
+    }
+    &__title {
+        font-size: 48px;
+        text-align: center;
+        margin-bottom: 15px;
+        letter-spacing: 2px;
+    }
+    &__subtitle {
+        font-size: 18px;
+        letter-spacing: 1px;
+        color: $accent-color;
+        text-align: center;
+    }
 }
 
 .header {
@@ -44,7 +69,6 @@ body {
     max-width: 1170px;
     margin: 0 auto;
     padding: 50px 0 178px 0;
-
     &__logo {
         display: block;
         background-image: url(../img/logo.svg);
@@ -85,7 +109,7 @@ body {
         padding-top: 2px;
         padding-bottom: 28px;
     }
-    &__name-top {
+    &__name_top {
         margin-top: 15px;
         letter-spacing: 0.9px;
         margin-bottom: -9px;
@@ -170,9 +194,7 @@ body {
 .block-counter {
     display: flex;
     justify-content: space-around;
-    margin-top: 180px;
-    margin-left: -20px;
-    margin-right: -44px;
+    margin: 180px -44px 0 -20px;
     p {
         font-family: 'Open Sans', sans-serif;
         text-align: center;
@@ -187,5 +209,100 @@ body {
             margin-bottom: 13px;
             letter-spacing: 3.4px;
         }
+    }
+    p.shift {
+        padding-left: 20px;
+    }
+}
+
+.block-about {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 81px;
+    h3 {
+        margin-bottom: 20px;
+    }
+    p {
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 0.3px;
+        line-height: 24px;
+    }
+    &-text {
+        flex-basis: 41%;
+        &__featured {
+            margin-top: 28px;
+            display: flex;
+            justify-content: flex-start;
+       
+            p {
+                font-family: 'Roboto Slab', serif;
+                font-size: 18px;
+                letter-spacing: 1px;
+                font-weight: 700;
+            }
+            ul {
+                list-style-type: none;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 0 20px;
+                li {
+                    padding-right: 18px;
+                }
+                li.f1 {
+                    display: block;
+                    width: 14px;
+                    height: 17px;
+                }
+                li.f2 {
+                    display: block;
+                    width: 16px;
+                    height: 17px;
+                }
+                li.f3 {
+                    display: block;
+                    width: 24px;
+                    height: 18px;
+                }
+            }
+
+        }
+    }
+    &-table {
+        flex-basis: 49%;
+        &__list {
+            padding: 0;
+            counter-reset: list;
+            column-count: 2;
+            margin: 25px 0 0 0;
+            &>li {
+                position: relative;
+                counter-increment: list;
+                list-style-type: none;
+                padding-left: 36px;
+                font-family: 'Open Sans', sans-serif;
+                letter-spacing: 0.3px;
+                margin-bottom: 15px;
+                &::before {
+                    content: counter(list) ". ";
+                }
+                &::after {
+                    content: '+';
+                    position: absolute;
+                    left: 0;
+                    top: 0px;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 15px;
+                    line-height: 20px;
+                    background-color: $accent-color;
+                    color: $light-color;
+                    padding: 0px 7px;
+                }
+            }
+        }
+        &__btn-more {
+            margin-top: 25px;
+            display: inline-block;
+            padding: 15px 45px 15px 45px;        }
     }
 }
