@@ -15,16 +15,18 @@ h1, h2, h3, h4, p {
     padding: 0;
     margin: 0;
 }
-
+h2 {color: $bg-dark-color;}
 h3 {
     font-size: 24px;
     letter-spacing: 1.2px;
+    color: $bg-dark-color;
 }
 
 /*font-family: 'Open Sans', sans-serif;*/
 
 body {
     font-family: 'Roboto Slab', serif;
+    color: #696980;
    /* font-size: 15px;
     line-height: 24px;*/
 }
@@ -46,12 +48,12 @@ body {
     padding: 160px 0 160px;
     &_gray {
         background-color: $bg-light-color;
-        padding: 149px 0 230px;
+        padding: 149px 0 235px;
     }
     &__title {
         font-size: 48px;
         text-align: center;
-        margin-bottom: 15px;
+        margin-bottom: 11px;
         letter-spacing: 2px;
     }
     &__subtitle {
@@ -170,6 +172,38 @@ body {
         width: 445px;
         height: 639px;
         flex-basis: 445px;
+        position: relative;
+        &__title {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: $light-color;
+            text-align: center;
+            position: absolute;
+            top: 109px;
+            left: 130px;
+            span {
+                display: block;
+                color: $accent-color;
+                text-transform: none;
+                letter-spacing: 0.7px;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                margin-top: 5px;
+            }
+        }
+        &__author {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.7px;
+            color: $accent-color;
+            position: absolute;
+            left: 85px;
+            bottom: 56px;
+        }
     }
 }
 
@@ -194,7 +228,7 @@ body {
 .block-counter {
     display: flex;
     justify-content: space-around;
-    margin: 180px -44px 0 -20px;
+    margin: 180px -39px 0 -15px;
     p {
         font-family: 'Open Sans', sans-serif;
         text-align: center;
@@ -218,9 +252,9 @@ body {
 .block-about {
     display: flex;
     justify-content: space-between;
-    margin-top: 81px;
+    margin-top: 84px;
     h3 {
-        margin-bottom: 20px;
+        margin-bottom: 18px;
     }
     p {
         font-family: 'Open Sans', sans-serif;
@@ -230,51 +264,39 @@ body {
     &-text {
         flex-basis: 41%;
         &__featured {
-            margin-top: 28px;
+            margin-top: 30px;
             display: flex;
             justify-content: flex-start;
-       
+            align-items: center;
             p {
                 font-family: 'Roboto Slab', serif;
                 font-size: 18px;
                 letter-spacing: 1px;
                 font-weight: 700;
+                color: $bg-dark-color;
             }
             ul {
                 list-style-type: none;
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                padding: 0 20px;
+                padding: 0 23px;
                 li {
-                    padding-right: 18px;
-                }
-                li.f1 {
-                    display: block;
-                    width: 14px;
-                    height: 17px;
-                }
-                li.f2 {
-                    display: block;
-                    width: 16px;
-                    height: 17px;
-                }
-                li.f3 {
-                    display: block;
-                    width: 24px;
-                    height: 18px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: 18px;
+                    padding-right: 14px;
+                    a {color: $accent-color;}
                 }
             }
 
         }
     }
     &-table {
-        flex-basis: 49%;
+        flex-basis: 48.8%;
         &__list {
             padding: 0;
             counter-reset: list;
             column-count: 2;
-            margin: 25px 0 0 0;
+            column-gap: 26px;
+            margin: 27px 0 0 0;
             &>li {
                 position: relative;
                 counter-increment: list;
@@ -282,7 +304,7 @@ body {
                 padding-left: 36px;
                 font-family: 'Open Sans', sans-serif;
                 letter-spacing: 0.3px;
-                margin-bottom: 15px;
+                margin-bottom: 14px;
                 &::before {
                     content: counter(list) ". ";
                 }
@@ -294,7 +316,7 @@ body {
                     font-family: 'Open Sans', sans-serif;
                     font-size: 15px;
                     line-height: 20px;
-                    background-color: $accent-color;
+                    background-color: #5fc9b4;
                     color: $light-color;
                     padding: 0px 7px;
                 }
@@ -303,6 +325,44 @@ body {
         &__btn-more {
             margin-top: 25px;
             display: inline-block;
-            padding: 15px 45px 15px 45px;        }
+            padding: 13px 45px 15px 45px;        }
+    }
+}
+.other-books {
+    padding: 148px 261px 160px;
+    &_shelf {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 92px;
+        &__item {
+            position: relative;
+            &-image {
+                display: block;
+                background-image: url(../img/book-img.svg);
+                margin: 0 auto;
+                text-align: center;
+                width: 269px;
+                height: 409px;
+                display: block;
+            }
+            &-name {
+                position: absolute;
+                top: 50px;
+                left: 50px;
+                color: $light-color;
+                span {
+                    color: $accent-color;
+                    display: block;
+                }
+            }
+            &-author {
+                position: absolute;
+                bottom: 50px;
+                left: 50px;
+                color: $accent-color;
+            }
+
+    
+        }
     }
 }
