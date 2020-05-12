@@ -140,16 +140,31 @@ body {
     }
     &__btn {
         display: block;
-        background-color: #65e496;
-        color: #fff;
+        background: linear-gradient(to top left, #65e49c, #65e4af);
+        color: $light-color;
         text-decoration: none;
+        border: none;
         font-size: 18px;
         max-width: 211px;
-        padding: 12px 20px 17px 20px;
+        padding: 12px 20px 17px;
         border-radius: 3px;
         text-align: center;
         letter-spacing: 0.7px;
         margin: 47px 0 19px 0;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            height: 20px;
+            width: 100%;
+            background-color: #b2f1be;
+            position: absolute;
+            z-index: -1;
+            bottom: -2px;
+            left: 0;
+            border-radius: 3px;
+
+        }
     }
     &__btn-read {
         max-width: 197px;
@@ -329,39 +344,84 @@ body {
     }
 }
 .other-books {
-    padding: 148px 261px 160px;
+    padding: 148px 235px 160px;
+    &__btn {
+        display: block;
+        margin: 0 auto;
+        padding: 12px 5px 17px;
+        margin-top: 88px;
+    }
     &_shelf {
         display: flex;
         justify-content: space-between;
-        margin-top: 92px;
+        margin-top: 86px;
         &__item {
             position: relative;
+            margin: 0 auto;
             &-image {
                 display: block;
                 background-image: url(../img/book-img.svg);
+                background-repeat: no-repeat;
                 margin: 0 auto;
                 text-align: center;
                 width: 269px;
                 height: 409px;
                 display: block;
-            }
-            &-name {
-                position: absolute;
-                top: 50px;
-                left: 50px;
-                color: $light-color;
-                span {
+                position: relative;
+                padding-bottom: 34px;
+                &-name {
+                    position: absolute;
+                    margin: 0;
+                    top: 70px;
+                    left: 68px;
+                    text-transform: uppercase;
+                    text-align: center;
+                    letter-spacing: 0.8px;
+                    color: $light-color;
+                    span {
+                        color: $accent-color;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 12px;
+                        font-weight: 400;
+                        text-transform: none;
+                        letter-spacing: 0.6px;
+                        display: block;
+                        margin-top: 10px;
+                    }
+                }
+                &-author {
+                    position: absolute;
+                    bottom: 67px;
+                    left: 79px;
                     color: $accent-color;
-                    display: block;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
                 }
             }
-            &-author {
-                position: absolute;
-                bottom: 50px;
-                left: 50px;
-                color: $accent-color;
+            &-name {
+                text-align: center;
             }
-
+            &-descr {
+                text-align: center;
+                margin-top: 15px;
+                margin-bottom: 20px;
+                max-width: 350px;
+                font-family: 'Open Sans', sans-serif;
+                line-height: 1.5;
+                letter-spacing: 0.3px;
+            }
+            &-more {
+                display: block;
+                text-decoration: none;
+                color: $accent-color;
+                text-transform: uppercase;
+                text-align: center;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 15px;
+                letter-spacing: 0.6px;
+                font-weight: 700;
+            }
     
         }
     }
