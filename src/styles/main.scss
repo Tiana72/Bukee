@@ -15,11 +15,15 @@ h1, h2, h3, h4, p {
     padding: 0;
     margin: 0;
 }
-h2 {color: $bg-dark-color;}
+
+h2, h3, h4 {
+    color: $bg-dark-color;
+    font-weight: 700;
+}
+
 h3 {
     font-size: 24px;
     letter-spacing: 1.2px;
-    color: $bg-dark-color;
 }
 
 /*font-family: 'Open Sans', sans-serif;*/
@@ -52,6 +56,9 @@ body {
     &_gray {
         background-color: $bg-light-color;
         padding: 149px 0 237px;
+        &__blog {
+            padding: 149px 0 159px;
+        }
     }
     &__title {
         font-size: 48px;
@@ -124,7 +131,6 @@ body {
         &--emma {
             margin-top: -4px;
             margin-left: 4px;
-   
         }
     }
     &__title {
@@ -172,6 +178,12 @@ body {
         &-dark {
             box-shadow: 0 -2px #59bb88 inset;
         }
+        &-blog {
+            display: block;
+            margin: 0 auto;
+            padding: 12px 28px 17px;
+            margin-top: 83px;
+            }
     }
     &__btn-read {
         max-width: 197px;
@@ -459,6 +471,50 @@ body {
                 font-weight: 700;
             }
     
+        }
+    }
+}
+
+.block-blog {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 87px;
+    &-img {
+        width: 369px;
+        height: 224px;
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 369px;
+            height: 224px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+    }
+    &-item {
+        flex-basis: 31.5%;
+        h4 {
+            font-size: 18px;
+            margin: 18px 0 5px 0;
+            letter-spacing: 0.85px;
+        }
+        &__link {
+            font-family: 'Open Sans', sans-serif;
+            letter-spacing: 0.15px;
+            margin-bottom: 13px;
+            a {
+                color: $accent-color;
+                text-decoration: none;
+                letter-spacing: 0.15px;
+            }
+        }
+        p {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 24px;
+            letter-spacing: 0.25px;
         }
     }
 }
