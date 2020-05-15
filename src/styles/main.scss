@@ -10,6 +10,7 @@ $light-color: #fff;
 $accent-color: #65e496;
 $bg-light-color: #f5f6fa;
 $bg-dark-color: #44444f;
+$gray-color: #9191b5;
 
 h1, h2, h3, h4, p {
     padding: 0;
@@ -349,7 +350,6 @@ body {
                     a {color: $accent-color;}
                 }
             }
-
         }
     }
     &-table {
@@ -511,10 +511,117 @@ body {
                 letter-spacing: 0.15px;
             }
         }
-        p {
+        &__text {
             font-family: 'Open Sans', sans-serif;
             line-height: 24px;
             letter-spacing: 0.25px;
+        }
+    }
+}
+.block-letter {
+    display: flex;
+    justify-content: space-between;
+    &-item {
+        flex-basis: 48.7%;
+    }
+    &__input {
+        width: 100%;
+        background-color: $bg-dark-color;
+        font-family: 'Open Sans', sans-serif;
+        border: none;
+        border-radius: 3px;
+        padding: 15px 28px;
+        letter-spacing: 0.25px;
+        box-sizing: border-box;
+        color: $gray-color;
+        margin-top: 10px;
+        &:focus {
+            outline: none;
+        }
+        &::-webkit-input-placeholder {color:$gray-color;}
+        &::-moz-placeholder          {color:$gray-color;}/* Firefox 19+ */
+        &:-moz-placeholder           {color:$gray-color;}/* Firefox 18- */
+        &:-ms-input-placeholder      {color:$gray-color;}
+
+    }
+    &__btn {
+        max-width: 100%;
+        width: 100%;
+        margin-top: 20px;
+        &:focus {
+            outline: none;
+        }
+    }
+    &__title {
+        text-align: left;
+    }
+    &__text {
+        font-family: 'Open Sans', sans-serif;
+        line-height: 24px;
+        letter-spacing: 0.3px;
+    }
+}
+
+.footer {
+    background-color: $bg-dark-color;
+    color: $gray-color;
+    font-family: 'Open Sans', sans-serif;
+    padding: 157px 0 80px;
+}
+
+.block-footer {
+    display: flex;
+    justify-content: space-between;
+    &-item {
+        margin: 0;
+        &__left {
+            flex-basis: 33%;
+        }
+        &__center {
+            flex-basis: 24.2%;
+        }
+        &__right {
+            flex-basis: 23.2%;
+        }
+    }
+    &__text {
+        margin-top: 28px;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+    }
+    &__copy {
+        margin-top: 28px;
+        letter-spacing: 0.1px;
+    }
+    &__title {
+        color: $accent-color;
+        text-transform: uppercase;
+        font-family: 'Roboto Slab', serif;
+        font-size: 18px;
+        margin-top: 15px;
+        margin-bottom: 23px;
+        letter-spacing: 0.7px;
+
+    }
+    &__links {
+        list-style-type: none;
+        &>li {
+            margin-bottom: 11px;
+        }
+        &>li>a {
+            color: $gray-color;
+            text-decoration: none;
+            letter-spacing: 0.1px;
+        }
+    }
+    &__social {
+        list-style-type: none;
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 18px;
+            padding-right: 14px;
+            a {color: $accent-color;}
         }
     }
 }
