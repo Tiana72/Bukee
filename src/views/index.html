@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>gulp-scss-starter</title>
+        <title>BUKEE</title>
         <meta name="theme-color" content="#fff">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -26,7 +26,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Roboto+Slab:wght@100;400;700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/64542cfcb0.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="styles/main.css">
-
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     </head>
     <body>
         @@include("../blocks/modules/header/header.html")
@@ -163,6 +163,45 @@
         </div>
         <a href="" class="block-text__btn other-books__btn">Browse all books</a> 
     </div>
+    <div class="page page-carousel">
+        <div class="wrap">
+            <div class="block-carousel">
+                <div>
+                    <div class="block-carousel-ava">
+                        <div class="block-carousel-thumb">
+                            <img src="../img/thumb.png" alt="">
+                        </div>
+                        <span class="block-carousel-bq"></span>
+                    </div>
+                    <h3>Kate Dennings</h3>
+                    <p class="block-carousel-expert">Calligraphy Expert</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                </div>
+                <div>
+                    <div class="block-carousel-ava">
+                        <div class="block-carousel-thumb">
+                            <img src="../img/thumb.png" alt="">
+                        </div>
+                        <span class="block-carousel-bq"></span>
+                    </div>
+                    <h3>Kate Dennings</h3>
+                    <p class="block-carousel-expert">Calligraphy Expert</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                </div>
+                <div>
+                    <div class="block-carousel-ava">
+                        <div class="block-carousel-thumb">
+                            <img src="../img/thumb.png" alt="">
+                        </div>
+                        <span class="block-carousel-bq"></span>
+                    </div>
+                    <h3>Kate Dennings</h3>
+                    <p class="block-carousel-expert">Calligraphy Expert</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="page page_event">
         <div class="wrap">
             <div class="block-author">
@@ -278,7 +317,19 @@
             </div>
         </div>
     </div>
-        <script src="js/main.js"></script>
-        <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/vendor.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.block-carousel').slick({
+                dots: true,
+                arrows: false,
+            });
+        });
+    </script>
+
     </body>
 </html>
